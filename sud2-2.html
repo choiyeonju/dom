@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" type="text/css" href="header.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="footer.css">
+</head>
+<body id="body_green">
+<header>
+    <div id="main_menu">
+        <a href="index.html">
+            <img id="logo" src="img/logo.png" alt="Logo">
+        </a>
+        <ul id="nav">
+            <li><a href="sud1-1.html">Fashion</a></li>
+            <li><a href="sud2.html">Spaces</a></li>
+            <li><a href="sud3.html">portfolio</a></li>
+            <li><a href="sud4.html">Cooking</a></li>
+            <li><a href="sud5.html">Gallery</a></li>
+        </ul>
+    </div>
+</header>
+<main>
+    <ul id="Spaces_nav" class="nav">
+        <li><a href="sud2.html">My Room</a></li>
+        <li><a href="sud2-1.html">Favorite Item.1</a></li>
+        <li><a href="sud2-2.html">Favorite Item.2</a></li>
+    </ul>
+    <h3 class="s_con_h3">Favorite Item</h3>
+    <div class="s_con2">
+        <img src="img/room_item4.png">
+        <p>마지막으로 제가 제일 아끼고 좋아하는 동숲 레고들입니다.<br>
+        출시하자마자 너무너무 갖고싶어서 부산, 수원, 의왕 등 많은 백화점들을 돌아다니며 구한 것들인데<br>
+        조립하고나서 볼 때 마다 흐뭇하고, 기분이 좋습니다! 여러분도 구경하고 가세요!</p>
+
+    </div>
+
+</main>
+
+<div class="clear"></div>
+<footer>
+    <ul id="address">
+        <li> 최연주 | 계원예술대학교 | 디지털미디어디자인 21961119</li>
+        <li> 이메일 | 337ty@naver.com  | 경기도 의왕시 계원대학로 66 </li>
+        <li>© YeonJu Choi</li>
+    </ul>
+    <ul id="footer_sns">
+        <li><img src="img/f.png"></li>
+        <li><img src="img/i.png"></li>
+        <li><img src="img/u.png"></li>
+    </ul>
+    <img id="footer_logo" src="img/footer_logo.png">
+</footer>
+
+
+<script>
+    const images = ['img/room_img2.png', 'img/room_img3.png', 'img/room_img1.png']; // 이미지 파일 경로 배열
+    let currentIndex = 0;
+
+    const sliderImage = document.getElementById('sliderImage');
+
+    sliderImage.addEventListener('click', function() {
+
+        sliderImage.classList.add('fade-out');
+
+
+        setTimeout(() => {
+            currentIndex = (currentIndex + 1) % images.length;
+            sliderImage.src = images[currentIndex];
+
+            sliderImage.classList.remove('fade-out');
+        }, 300);
+    });
+</script>
+
+</body>
+</html>

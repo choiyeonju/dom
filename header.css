@@ -1,0 +1,97 @@
+header {
+    height: 140px;
+}
+header #logo {
+    height: 70%;
+    margin-top: 20px;
+    margin-left: 120px;
+}
+#main_menu {
+    width: 100%;
+    /*position: fixed;*/
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin: auto;
+}
+#nav {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+#nav a {
+    text-decoration: none;
+    color: inherit;
+}
+#nav li {
+    margin: 0 30px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 700;
+}
+#nav li:last-child {
+    margin-right: 130px;
+}
+header #nav a:link {
+    text-decoration: none;
+    color: #F6EEE1;
+}
+header #nav a:visited {
+    text-decoration: none;
+    color: #F6EEE1;
+}
+header #nav a:hover {
+    text-decoration: none;
+    color: #807f7f;
+}
+@media screen and (max-width: 768px) {
+    #main_img,
+    #index_con1 {
+        position: static;
+        width: 100%;
+        padding-left: 0;
+    }
+    #index_con1 #logo_title {
+        width: 90%;
+        padding-top: 0;
+    }
+
+    header {
+        height: auto; /* 헤더 높이를 자동으로 조정 */
+    }
+
+    header #logo {
+        width: 80%;
+        margin-left: 0%;
+        margin-right: 10%;
+
+
+    }
+
+    #main_menu {
+        flex-direction: column;
+        align-items: center; /* 중앙 정렬 */
+        margin-top: 20px; /* 로고와 메뉴 간격 조정 */
+    }
+
+    #nav {
+        flex-direction: row; /* li 요소는 수평 배치 */
+        justify-content: center; /* 네비게이션 리스트 중앙 정렬 */
+        width: 100%;
+    }
+
+    #nav li {
+        margin: 10px 10px;
+        font-size: 20px;
+    }
+
+    #nav li:last-child {
+        margin-right: 10%; /* 마진 간격 조정 */
+    }
+}
